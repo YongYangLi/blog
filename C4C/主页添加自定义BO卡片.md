@@ -151,7 +151,8 @@ OWL中的name<br>
 
 > 此时不再是把NAV_OBJ_TYPE 的 FLOORPLAN 改成OWL_INPORT
 
-* 要改的参数有<br>
+* 要改的参数有
+<br>
 TILE_ID(标题):关键绩效指标编号ID,这样就会使得卡片的标题和绩效指标一致
 <br>
 TILE_PATTERN:KPISIMPLE
