@@ -34,7 +34,7 @@
 路径:
 
   ```html
-  <WorkCenterPath>-<WorkCenterViewName>-<OWLName>::<Intort>::<DefaultSetName>
+  <WorkCenterPath>-<WorkCenterViewName>-<OWLName>::<InPort>::<DefaultSetName>
   ```
 <p align="center">
   <img src="./sources/img/DIY_Card2.png">
