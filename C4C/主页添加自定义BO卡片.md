@@ -33,9 +33,9 @@
 <br>
 路径:
 
-```html
-<WorkCenterPath>-<WorkCenterViewName>-<OWLName>::<Intort>::<DefaultSetName>
-```
+  ```html
+  <WorkCenterPath>-<WorkCenterViewName>-<OWLName>::<Intort>::<DefaultSetName>
+  ```
 <p align="center">
   <img src="./sources/img/DIY_Card2.png">
 </p>
@@ -124,4 +124,53 @@ OWL中的name<br>
 
 * 至此,不带数量的卡片就已经完成了
 
+### 3.创建带数量的卡片
 
+* 首先为了显示数量,应该为BO开发一个计数报表,把计数作为关键值
+>注:查询条件要和OWL Query匹配上才能正确显示数量
+<p align="center">
+  <img src="./sources/img/DIY_Card15.png">
+</p>
+
+* 设计关键绩效指标
+
+<p align="center">
+  <img src="./sources/img/DIY_Card16.png">
+</p>
+<p align="center">
+  <img src="./sources/img/DIY_Card17.png">
+</p>
+
+> 如果想让卡片上的数字字体显示颜色,可以在值和临界值配置,这里当数量小于5,就是绿色,5-10警告黄色,大于10异常红色.这个也可以使用报表中的动态数据,不再多说.
+
+<p align="center">
+  <img src="./sources/img/DIY_Card18.png">
+</p>
+
+* 以上都准备完毕,则可以开始创建卡片,重复步骤2,在保存时进入断点
+
+> 此时不再是把NAV_OBJ_TYPE 的 FLOORPLAN 改成OWL_INPORT
+
+* 要改的参数有
+<br>
+TILE_ID(标题):关键绩效指标编号ID,这样就会使得卡片的标题和绩效指标一致
+<br>
+TILE_PATTERN:KPISIMPLE
+<br>
+TILE_OBJ_TYPE:KPI
+<br>
+TILE_OBJECT:关键绩效指标编号ID,这样就会使得卡片的数量和绩效指标一致
+<br> 
+NAV_OBJ_TYPE:OWL_INP_QR
+<br>
+NAV_OBJECT_ID:跳转链接,如果前面输入的路径正确,这里就不用修改了
+
+<p align="center">
+  <img src="./sources/img/DIY_Card18.png">
+</p>
+
+> 综上,其实就是把跳转链接设为OWL路径,标题和绩效指标一致,结合就能达到我们的效果
+
+如过程中遇到问题(不包括C4C基础的开发知识,仅限和本文相关),可以联系我<br>
+QQ:2441534107<br>
+Email:[2441534107@qq.com](mailto:2441534107@qq.com)
