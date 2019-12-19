@@ -32,8 +32,8 @@
 描述:任意
 <br>
 路径:
-  ```
-  <WorkCenterPath>-<WorkCenterViewName>-<OWLName>::<Inport>::<DefaultSetName>
+  ```JavaScript
+  <WorkCenterPath>-<WorkCenterViewName>-<OWLName>::<Intort>::<DefaultSetName>
   ```
 <p align="center">
   <img src="./sources/img/DIY_Card2.png">
