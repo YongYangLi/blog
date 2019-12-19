@@ -151,8 +151,7 @@ OWL中的name<br>
 
 > 此时不再是把NAV_OBJ_TYPE 的 FLOORPLAN 改成OWL_INPORT
 
-* 要改的参数有
-<br>
+* 要改的参数有<br>
 TILE_ID(标题):关键绩效指标编号ID,这样就会使得卡片的标题和绩效指标一致
 <br>
 TILE_PATTERN:KPISIMPLE
@@ -166,7 +165,7 @@ NAV_OBJ_TYPE:OWL_INP_QR
 NAV_OBJECT_ID:跳转链接,如果前面输入的路径正确,这里就不用修改了
 
 <p align="center">
-  <img src="./sources/img/DIY_Card18.png">
+  <img src="./sources/img/DIY_Card19.png">
 </p>
 
 > 综上,其实就是把跳转链接设为OWL路径,标题和绩效指标一致,结合就能达到我们的效果
