@@ -66,7 +66,7 @@ if(!locked){
 
 BOAction.CheckLock的参数,你可以通过以下路径找到
 
-![image-20211014160257884](C:\Users\yongyang\AppData\Roaming\Typora\typora-user-images\image-20211014160257884.png)
+![](https://gitee.com/yongyangli/image/raw/master/image/image-20211014160257884.png)
 
 
 
