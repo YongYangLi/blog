@@ -25,6 +25,6 @@
 }
 </style>
 
-<p class="title"><a href="/" style="text-decoration: none; color: inherit;">宵咕咕啦</a></p>
+<p class="title"><a href="/blog" style="text-decoration: none; color: inherit;">宵咕咕啦</a></p>
 <div class="line"></div>
 <p class="sub">✦ ✦ ✦</p>
