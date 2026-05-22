@@ -1,7 +1,7 @@
 # 主页添加自定义BO卡片
 ## 演示
 <p align="center">
-  <img src="./sources/img/C4C_DIY_CARD.gif">
+  <img src="/C4C/sources/img/C4C_DIY_CARD.gif">
 </p>
 
 ## 需要技术
@@ -18,7 +18,7 @@
 
 * 以管理员角色登录到系统,编辑主屏幕,调整用户对应的角色
 <p align="center">
-  <img src="./sources/img/DIY_Card1.png">
+  <img src="/C4C/sources/img/DIY_Card1.png">
 </p>
 
 * 点击添加卡片按钮,选择创建自定义卡片
@@ -37,7 +37,7 @@
   <WorkCenterPath>-<WorkCenterViewName>-<OWLName>::<InPort>::<DefaultSetName>
   ```
 <p align="center">
-  <img src="./sources/img/DIY_Card2.png">
+  <img src="/C4C/sources/img/DIY_Card2.png">
 </p>
 
 * 路径分析<br>
@@ -46,21 +46,21 @@
 WCF中的Unique ID<br>
 我这里是：/YRDRNBVAY_MAIN/SRC/quickRepaire/QuickRepair_WCF.WCF.uiwoc
 <p align="center">
-  <img src="./sources/img/DIY_Card3.png">
+  <img src="/C4C/sources/img/DIY_Card3.png">
 </p>
 
 > &#60;WorkCenterViewName&#62;<br>
 WCV中的name（标准bo是这样没错，但是自定义BO不是这样。先这样写，后面再修改）<br>
 我这里是：QuickRepair_WCView
 <p align="center">
-  <img src="./sources/img/DIY_Card4.png">
+  <img src="/C4C/sources/img/DIY_Card4.png">
 </p>
 
 > &#60;OWLName&#62;<br>
 OWL中的name<br>
 我这里是：QuickRepair_OWL
 <p align="center">
-  <img src="./sources/img/DIY_Card5.png">
+  <img src="/C4C/sources/img/DIY_Card5.png">
 </p>
 
 > &#60;Inport&#62;<br>
@@ -69,17 +69,17 @@ OWL中的name<br>
 在root节点下新建个参数FromCODHomePage，名称随意，然后OWL defaultset绑定这个参数
 
 <p align="center">
-  <img src="./sources/img/DIY_Card6.png">
+  <img src="/C4C/sources/img/DIY_Card6.png">
 </p>
 <p align="center">
-  <img src="./sources/img/DIY_Card7.png">
+  <img src="/C4C/sources/img/DIY_Card7.png">
 </p>
 
 > &#60;DefaultSetName&#62;<br>
 在OWL建个query,如果在query添加了Anchor,则用户也可以在前台保存自定义查询<br>
 这种自定义的名称格式为"$PersonalizedDefaultSet*",这里不多讲,有兴趣可以联系我
 <p align="center">
-  <img src="./sources/img/DIY_Card8.png">
+  <img src="/C4C/sources/img/DIY_Card8.png">
 </p>
 
 > 把以上所有的路径连接在一起<br>/YRDRNBVAY_MAIN/SRC/quickRepaire/QuickRepair_WCF.WCF.uiwoc-QuickRepair_WCView-QuickRepair_OWL::FromCODHomePage::DefaultSet
@@ -87,22 +87,22 @@ OWL中的name<br>
 * 创建自定义卡片信息填写完整后,先不要点击保存<br>
 >  Ctrl+shift+J打开开发者工具,搜索 _createNewTileCatalogObject,如果搜索不到,可以按F5刷新,重新搜索
 <p align="center">
-  <img src="./sources/img/DIY_Card9.png">
+  <img src="/C4C/sources/img/DIY_Card9.png">
 </p>
 
 > 进入函数，找到下面位置打上断点
 <p align="center">
-  <img src="./sources/img/DIY_Card10.png">
+  <img src="/C4C/sources/img/DIY_Card10.png">
 </p>
 
 >回到前台，点击保存，进入到断点
 <p align="center">
-  <img src="./sources/img/DIY_Card11.png">
+  <img src="/C4C/sources/img/DIY_Card11.png">
 </p>
 
 >把NAV_OBJ_TYPE 的 FLOORPLAN 改成OWL_INPORT
 <p align="center">
-  <img src="./sources/img/DIY_Card12.png">
+  <img src="/C4C/sources/img/DIY_Card12.png">
 </p>
 
 >F8执行,然后发布，离开调整模式
@@ -110,12 +110,12 @@ OWL中的name<br>
 
 > 打开开发者工具，搜索NavigationHandler._navigateWcvOwlInportQuery,对应位置打上断点
 <p align="center">
-  <img src="./sources/img/DIY_Card13.png">
+  <img src="/C4C/sources/img/DIY_Card13.png">
 </p>
 
 >点击刚才配置的卡片,会进入断点
 <p align="center">
-  <img src="./sources/img/DIY_Card14.png">
+  <img src="/C4C/sources/img/DIY_Card14.png">
 </p>
 
 >在这里不难看出,是因为WCV_NAME的不匹配导致没有正确跳转,因为自定义BO的WCV视图名称是系统自动生成的一串代码，和我们在路径里面配置的匹配不上。这里我们把断点这里的值记下来，然后去调整自定义卡片的路径
@@ -129,22 +129,22 @@ OWL中的name<br>
 * 首先为了显示数量,应该为BO开发一个计数报表,把计数作为关键值
 >注:查询条件要和OWL Query匹配上才能正确显示数量
 <p align="center">
-  <img src="./sources/img/DIY_Card15.png">
+  <img src="/C4C/sources/img/DIY_Card15.png">
 </p>
 
 * 设计关键绩效指标
 
 <p align="center">
-  <img src="./sources/img/DIY_Card16.png">
+  <img src="/C4C/sources/img/DIY_Card16.png">
 </p>
 <p align="center">
-  <img src="./sources/img/DIY_Card17.png">
+  <img src="/C4C/sources/img/DIY_Card17.png">
 </p>
 
 > 如果想让卡片上的数字字体显示颜色,可以在值和临界值配置,这里当数量小于5,就是绿色,5-10警告黄色,大于10异常红色.这个也可以使用报表中的动态数据,不再多说.
 
 <p align="center">
-  <img src="./sources/img/DIY_Card18.png">
+  <img src="/C4C/sources/img/DIY_Card18.png">
 </p>
 
 * 以上都准备完毕,则可以开始创建卡片,重复步骤2,在保存时进入断点
@@ -166,7 +166,7 @@ NAV_OBJ_TYPE:OWL_INP_QR
 NAV_OBJECT_ID:跳转链接,如果前面输入的路径正确,这里就不用修改了
 
 <p align="center">
-  <img src="./sources/img/DIY_Card19.png">
+  <img src="/C4C/sources/img/DIY_Card19.png">
 </p>
 
 > 综上,其实就是把跳转链接设为OWL路径,标题和绩效指标一致,结合就能达到我们的效果 

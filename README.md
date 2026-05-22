@@ -1,27 +1,35 @@
-# Blog
-[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+<style>
+@keyframes neon {
+  0%, 100% { text-shadow: 0 0 10px #8b5cf6, 0 0 20px #7c3aed, 0 0 40px #6d28d9, 0 0 80px #5b21b6; }
+  50% { text-shadow: 0 0 20px #3b82f6, 0 0 40px #2563eb, 0 0 80px #1d4ed8, 0 0 120px #1e40af; }
+}
+@keyframes bar {
+  0% { width: 0; }
+  50% { width: 100%; }
+  100% { width: 0; }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.title {
+  font-size: 52px; font-weight: 900; text-align: center;
+  color: #c4b5fd;
+  animation: neon 2s ease-in-out infinite;
+  margin: 30px 0 0 0;
+}
+.line {
+  height: 3px; margin: 20px auto 12px; max-width: 200px;
+  background: linear-gradient(90deg, #8b5cf6, #3b82f6, #06b6d4);
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+  border-radius: 2px;
+}
+.sub {
+  text-align: center; color: #64748b; font-size: 14px; letter-spacing: 4px;
+}
+</style>
 
-工作 996，生病 ICU
-
-## 最新文章
-* 2021-10-14 - [SAP工程库](https://github.com/YongYangLi/blog/blob/master/C4C/SAP%E5%B7%A5%E7%A8%8B%E5%BA%93.md)
-
-## 目录
-
-### SAP C4C
-
-* [主页添加自定义BO卡片](https://github.com/YongYangLi/blog/blob/master/C4C/%E4%B8%BB%E9%A1%B5%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89BO%E5%8D%A1%E7%89%87.md)
-
-* [SAP工程库](https://github.com/YongYangLi/blog/blob/master/C4C/SAP%E5%B7%A5%E7%A8%8B%E5%BA%93.md)
-
-### SAP CPI
-
-* 待补充
-
-### SAP UI5
-
-* 待补充
-
-### SAP ABAP
-
-* 待补充
+<p class="title"><a href="/" style="text-decoration: none; color: inherit;">宵咕咕啦</a></p>
+<div class="line"></div>
+<p class="sub">✦ ✦ ✦</p>
